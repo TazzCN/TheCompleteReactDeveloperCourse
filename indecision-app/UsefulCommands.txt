@@ -1,0 +1,5 @@
+Useful Commands
+
+cd C:\Users\TazzCN\Documents\GitHub\TheCompleteReactDeveloperCourse\indecision-app
+
+live-server public
