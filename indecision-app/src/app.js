@@ -2,13 +2,13 @@ console.log('App.js is running');
 
 //JSX
 
-var App = {
+const App = {
     title: ' Indecision App',
     subTitle: 'Put your life in the hands of a computer',
     options:['One', 'Two']
 };
 
- var template = ( 
+ const template = ( 
     <div>
         <h1>{App.title}</h1>
         {App.subTitle && <p>{App.subTitle}</p>}
@@ -20,7 +20,7 @@ var App = {
     </div>
  );
 
- var user = {
+ const user = {
      age: 10
  };
 
@@ -30,7 +30,7 @@ var App = {
      }
  }
 
- var templateTwo = (
+ const templateTwo = (
      <div>
          <h1>{user.name?user.name:'Anonymous'}</h1>
          {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
@@ -38,6 +38,6 @@ var App = {
      </div>
  );
 
- var appRoot = document.getElementById("app");
+ const appRoot = document.getElementById("app");
 
  ReactDOM.render(template,appRoot); 
