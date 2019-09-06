@@ -14,7 +14,7 @@ const App = {
         {App.subTitle && <p>{App.subTitle}</p>}
         <p>{App.options.length > 0 ? "Here are your options": "No options"}</p>
         <ol>
-            <li>Item One</li>
+            <li>Item Three</li>
             <li>Item Two</li>
         </ol>
     </div>
