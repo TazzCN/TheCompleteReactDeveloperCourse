@@ -23,7 +23,7 @@ const removeAll = () => {
     render();
 };
 
-
+const number = [55, 101, 1000];
 
  const appRoot = document.getElementById("app");
 
@@ -36,8 +36,11 @@ const removeAll = () => {
             <p>{App.options.length}</p>
             <button onClick={removeAll}>Remove All</button>
             <ol>
-                <li>Item Three</li>
-                <li>Item Two</li>
+                {
+                    App.options.map((opt) => {
+                    return <li key = {opt}>{opt}</li>;
+                    })
+                }
             </ol>
             <form  onSubmit={onFormSubmit}>
                 <input type="text" name="option"/>
