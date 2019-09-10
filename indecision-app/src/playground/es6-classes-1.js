@@ -42,7 +42,6 @@ class Traveller extends Person {
         }
         return greeting;
     }
-
 }
 
 const me = new Traveller('Taz C', 23, 'Edinburgh');
