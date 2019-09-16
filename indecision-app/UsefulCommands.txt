@@ -11,3 +11,5 @@ babel src/playground/es6-arrow-function.js --out-file=public/scripts/app.js --pr
 babel src/playground/counter-example.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 yarn run serve 
+
+yarn run dev-server  
