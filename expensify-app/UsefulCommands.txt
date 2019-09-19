@@ -1,0 +1,15 @@
+Useful Commands
+
+cd C:\Users\TazzCN\Documents\GitHub\TheCompleteReactDeveloperCourse\expensify-app
+
+live-server public
+
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+babel src/playground/es6-arrow-function.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+babel src/playground/counter-example.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+yarn run serve 
+
+yarn run dev-server  
