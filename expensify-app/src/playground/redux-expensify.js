@@ -69,7 +69,7 @@ const filterReducerDefaultState = {
 };
 
 const filterReducer = (state = filterReducerDefaultState, action) => {
-    switch (action.type) 
+    switch (action.type) {
         case 'SET_TEXT':
             return {
                 ...state,
