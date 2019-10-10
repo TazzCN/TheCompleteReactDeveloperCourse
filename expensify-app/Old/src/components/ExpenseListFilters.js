@@ -38,8 +38,8 @@ class ExpenseListFilters extends React.Component {
           <option value="amount">Amount</option>
         </select>
         <DateRangePicker
-          startDate={this.props.filters.startDate}
-          endDate={this.props.filters.endDate}
+          startDate={this.props.filter.startDate}
+          endDate={this.props.filter.endDate}
           onDatesChange={this.onDatesChange}
           focusedInput={this.state.calendarFocused}
           onFocusChange={this.onFocusChange}
@@ -54,7 +54,7 @@ class ExpenseListFilters extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    filters: state.filters
+    filter: state.filter
   };
 };
 
