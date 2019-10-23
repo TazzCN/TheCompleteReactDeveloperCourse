@@ -33,3 +33,41 @@ test('should render ExpenseListFilters with altFilters correctly', () => {
     });
     expect(wrapper).toMatchSnapshot();
 });
+
+test('should handle text change', () => {
+    const value = 'Text';
+    wrapper.find('input').at(0).simulate('change', {
+        target: { value }
+    });
+    expect(setTextFilter).toHaveBeenLastCalledWith(value);
+});
+
+test('should sort by date', () => {
+    const value = 'date';
+    wrapper.find('select').at(0).simulate('change', {
+        target: { value }
+    });
+    expect(sortByDate).toHaveBeenCalled();
+});
+
+test('should sort by amount', () => {
+    const value = 'amount';
+    wrapper.find('select').at(0).simulate('change', {
+        target: { value }
+    });
+    expect(sortByAmount).toHaveBeenCalled();
+});
+
+test('should handle dates changes', () => {
+    const startDate = altFilters.startDate;
+    const endDate = altFilters.endDate;
+    wrapper.find('DateRangePicker').prop('onDatesChange')({startDate, endDate});
+    expect(setStartDate).toHaveBeenLastCalledWith(startDate);
+    expect(setEndDate).toHaveBeenLastCalledWith(endDate);
+});
+
+test('should handle date focus change', () => {
+    const calendarFocused = 'endDate';
+    wrapper.find('DateRangePicker').prop('onFocusChange')(calendarFocused);
+    expect(wrapper.state('calendarFocused')).toBe(calendarFocused);
+});
